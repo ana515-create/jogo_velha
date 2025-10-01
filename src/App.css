@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+body {
+  font-family: 'Pirata One', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #2e2b2b; 
+  margin: 0;
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #a67c00;
+}
+
+.game {
+  text-align: center;
+  background: #3e2a47; 
+  padding: 25px;
+  border: 4px solid #20b2aa; 
+  border-radius: 12px;
+  box-shadow: 0 0 20px #20b2aa, 0 0 40px #00ffff inset; 
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4c3b58; 
+  border: 3px solid #20b2aa; 
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #d4af37; 
+  text-shadow: 0 0 8px #d4af37, 0 0 12px #a67c00;
+}
+
+.square:hover {
+  background: #5a3f66;
+  box-shadow: 0 0 15px #20b2aa, 0 0 25px #00ffff inset; 
+}
+
+.status {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #a67c00;
+}
+
+.reset {
+  padding: 12px 20px;
+  font-size: 14px;
+  background: #3e2a47;
+  color: #d4af37;
+  border: 3px solid #20b2aa; 
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  animation: glow 1.5s infinite alternate;
+}
+
+.reset:hover {
+  background: #2a1d2b;
+  color: #a67c00;
+  border-color: #20b2aa; 
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #20b2aa, 0 0 20px #00ffff inset; 
+  }
+  to {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #20b2aa inset; 
+  }
+}
